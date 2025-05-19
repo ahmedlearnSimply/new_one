@@ -12,6 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -61,22 +62,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(2),
-                color: Color(0xFFFF6464),
+
+            ElevatedButton(
+              onPressed: () {},
+
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Color(0xFFFF6464),
+                padding: EdgeInsets.zero,
+                fixedSize: Size(208, 48),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(2),
+                ),
               ),
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  "Download Resume",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    fontFamily: "hebbo",
-                    color: Color(0xFFFFFFFF),
-                  ),
-                  textAlign: TextAlign.center,
+              child: Text(
+                "Download Resume",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: "hebbo",
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
